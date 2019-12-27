@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AndroidDeynenko2.2.2</string>
+    <string name="settings">Settings</string>
+    <string name="book">Записная книжка</string>
+    <string name="main">Начальная страница</string>
+    <string name="save">Сохранить</string>
+    <string name="toast_save">данные сохранены</string>
+    <string name="toast_notes">Отркыть записную книжку</string>
+    <string name="toast_main">Отркыть начальную страницу</string>
+</resources>
