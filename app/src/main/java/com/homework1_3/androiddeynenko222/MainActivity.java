@@ -12,8 +12,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Intent intentNotes;
-    private int id;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,21 +31,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        id = item.getItemId();
-
+        int id = item.getItemId();
+        Intent targetIntent;
         if (id == R.id.action_open_notes) {
             Toast.makeText(MainActivity.this, getString(R.string.toast_notes),
                     Toast.LENGTH_LONG).show();
-            intentNotes = new Intent(MainActivity.this, NotesActivity.class);
-                startActivity(intentNotes);
+            targetIntent = new Intent(MainActivity.this, NotesActivity.class);
+                startActivity(targetIntent);
             return true;
         }
 
         if (id == R.id.action_open_main) {
-            Toast.makeText(MainActivity.this, getString(R.string.toast_main),
+            Toast.makeText(this, getString(R.string.toast_main),
                     Toast.LENGTH_LONG).show();
-            intentNotes = new Intent(MainActivity.this, MainActivity.class);
-                startActivity(intentNotes);
+            targetIntent = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(targetIntent);
             return true;
         }
 
